@@ -44,8 +44,8 @@ namespace Outracks.Fuse.Designer
 			IsExpanded = showLog;
 
 			var logChanged = new Subject<Unit>();
-			var logTab = new LogViewTab("Log", CreateLogView(mainLogStream, deviceMessages, logChanged), logChanged.Select(_ => true));
-			var problemsTab = new LogViewTab("Problems", errorView.Create(), errorView.NotifyUser);
+			var logTab = new LogViewTab("로그", CreateLogView(mainLogStream, deviceMessages, logChanged), logChanged.Select(_ => true));
+			var problemsTab = new LogViewTab("문제 살펴보기", errorView.Create(), errorView.NotifyUser);
 
 			var activeTab = new BehaviorSubject<LogViewTab>(logTab);
 			TabHeader = LogViewHeader.CreateHeader(new[] { logTab, problemsTab }, activeTab, showLog);
@@ -69,8 +69,8 @@ namespace Outracks.Fuse.Designer
 			var deviceLogs = new List<DeviceLog>();
 			var activeLogView = new BehaviorSubject<IControl>(mainLogView);
 			var activeChanged = new Subject<Unit>();
-			var mainLogButton = CreateLogSelectButton("All Output", mainLogView, activeLogView, activeChanged, true);
-			var clearButton = Label.Create("Clear", color: Theme.Active)
+			var mainLogButton = CreateLogSelectButton("모든 출력", mainLogView, activeLogView, activeChanged, true);
+			var clearButton = Label.Create("삭제", color: Theme.Active)
 				.OnMouse(pressed: doClear);
 
 			var buttons = new BehaviorSubject<IEnumerable<IControl>>(CreateButtonList(mainLogButton, deviceLogs));

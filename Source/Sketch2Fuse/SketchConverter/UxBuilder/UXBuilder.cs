@@ -29,8 +29,8 @@ namespace SketchConverter.UxBuilder
 				SketchLayerName = symbol.Name,
 				Attributes = new Dictionary<string, IUxSerializeable> {
 					{"ux:Class", new UxString(_symbolClassNameBuilder.GetClassName(symbol))},
-					{"Width", UxSize.Points((float) symbol.Frame.Width)},
-					{"Height", UxSize.Points((float) symbol.Frame.Height)}
+					{"Width (너비)", UxSize.Points((float) symbol.Frame.Width)},
+					{"Height (높이)", UxSize.Points((float) symbol.Frame.Height)}
 				}
 			};
 			AddChildrenLayers(symbolClassNode, symbol);

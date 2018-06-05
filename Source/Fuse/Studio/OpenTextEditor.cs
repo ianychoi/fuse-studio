@@ -20,7 +20,7 @@ namespace Outracks.Fuse.Designer
 				.Select(dir => new []
 				{
 					Menu.Item(
-						name: "Open in Sublime",
+						name: "Sublime에서 열기",
 						command: Command.Create(
 							isEnabled: dir.HasValue && sublimeTextPath.HasValue,
 							action: () => Task.Run(() =>

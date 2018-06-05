@@ -53,9 +53,9 @@ namespace Outracks.Fuse.Dashboard
 							Layout.Dock()
 							.Fill(
 								Layout.SubdivideVertically(
-										InfoItem("Learn","New to Fuse? Explore our Handbook,\r\nTutorials and Examples.","http://go.fusetools.com/tutorials", "Outracks.Fuse.Icons.Dashboard.Learn.png"),
-										InfoItem("Docs","Need some technical information?\r\nSearch the reference docs.", "https://go.fusetools.com/docs", "Outracks.Fuse.Icons.Dashboard.Docs.png"),
-										InfoItem("Community","Made something cool? Join a thriving\r\ncommunity of Fuse enthusiasts.", "https://go.fusetools.com/community","Outracks.Fuse.Icons.Dashboard.Community.png" ))
+										InfoItem("학습하기","Fuse가 처음이십니까? 핸드북,\r\n튜토리얼 및 예제를 살펴봅시다.","http://go.fusetools.com/tutorials", "Outracks.Fuse.Icons.Dashboard.Learn.png"),
+										InfoItem("문서","기술 정보가 필요하십니까?\r\n레퍼런스 문서에서 찾아보세요.", "https://go.fusetools.com/docs", "Outracks.Fuse.Icons.Dashboard.Docs.png"),
+										InfoItem("커뮤니티","멋진 앱을 만들어보고 싶습니까? Fuse에 \r\n열정이 있는 커뮤니티 구성원과 함께하세요.", "https://go.fusetools.com/community","Outracks.Fuse.Icons.Dashboard.Community.png" ))
 								.WithPadding(
 										left: new Points(32),
 										top: new Points(40))
@@ -101,7 +101,7 @@ namespace Outracks.Fuse.Dashboard
 			return
 			Layout.StackFromLeft(
 					Buttons.DefaultButton(
-							text: "Browse", 
+							text: "탐색", 
 							cmd: openProjectFromDialog)
 						.WithWidth(104),
 					Buttons.DefaultButtonPrimary(
@@ -159,7 +159,7 @@ namespace Outracks.Fuse.Dashboard
 										.WithHeight(1))
 									.Fill(
 										Buttons.TextButton(
-												text: "Recent Projects",
+												text: "최근 프로젝트",
 												color: Theme.Active,
 												font: Theme.DefaultFont,
 												hoverColor: Theme.ActiveHover,

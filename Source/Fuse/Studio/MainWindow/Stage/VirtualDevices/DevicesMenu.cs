@@ -13,9 +13,9 @@ namespace Outracks.Fuse.Stage
 			PreviewDevices previewDevices)
 		{
 			return Menu.Submenu(
-				"Device",
+				"장치",
 				Menu.Item(
-						"Flip aspect",
+						"가로/세로 회전",
 						command: Command.Enabled(() => 
 							currentDevice
 								.Select(device => device.With(
@@ -36,7 +36,7 @@ namespace Outracks.Fuse.Stage
 								convertBack: screen => new VirtualDevice(screen, screen.DefaultOrientation)))))
 					.Concat()
 				+ Menu.Separator
-				+ Menu.Item("Customize...", previewDevices.CustomizeDevices()));
+				+ Menu.Item("사용자 정의...", previewDevices.CustomizeDevices()));
 		}
 
 		static HotKey GetHotKey(int index)

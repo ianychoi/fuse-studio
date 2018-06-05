@@ -117,24 +117,24 @@ namespace Outracks.Fuse.Designer
 			var topMost = Property.Create(false);
 			var windowMenu =
 				  Menu.Toggle(
-					name: "Compact mode",
+					name: "컴팩트 모드",
 					toggle: mode.Convert(
 						convert: m => m == Mode.Compact,
 						convertBack: b => b ? Mode.Compact : Mode.Normal),
 					hotkey: HotKey.Create(ModifierKeys.Meta, Key.M))
 				+ Menu.Separator
 				+ Menu.Toggle(
-					name: "Keep window on top",
+					name: "창을 항상 위에",
 					toggle: topMost,
 					hotkey: HotKey.Create((_fuse.Platform == OS.Windows ? ModifierKeys.Shift : ModifierKeys.Alt) | ModifierKeys.Meta, Key.T))
 				+ Menu.Separator
 				+ Menu.Option(
 					value: Themes.OriginalLight,
-					name: "Light theme",
+					name: "밝은 테마",
 					property: Theme.CurrentTheme)
 				+ Menu.Option(
 					value: Themes.OriginalDark,
-					name: "Dark theme",
+					name: "어두운 테마",
 					property: Theme.CurrentTheme);
 
 			var messages = preview.Messages.Replay(TimeSpan.FromSeconds(2)).RefCount();
@@ -179,7 +179,7 @@ namespace Outracks.Fuse.Designer
 				+ Menu.Separator
 				+ ProjectMenu.FileItems(project, _shell)
 				+ Menu.Separator
-				+ Menu.Item("Sketch import", sketchConverter.ShowDialog());
+				+ Menu.Item("Sketch 가져오기", sketchConverter.ShowDialog());
 
 			var help = new Help();
 

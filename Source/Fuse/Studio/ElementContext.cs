@@ -23,7 +23,7 @@ namespace Outracks.Fuse
 		public Menu CreateMenu(IElement element)
 		{
 			return Menu.Item(
-					name: "Locate in editor",
+					name: "편집기 커서 위치",
 					command: FocusEditorCommand.Create(_context, _project, _daemon),
 					hotkey: HotKey.Create(ModifierKeys.Meta | ModifierKeys.Alt, Key.L))
 
@@ -31,7 +31,7 @@ namespace Outracks.Fuse
 
 				// Edit class element we're currently not editing 
 				+ Menu.Item(
-						name: element.UxClass().Select(n => "Edit " + n.Or("class")).AsText(),
+						name: element.UxClass().Select(n => "편집: " + n.Or("class")).AsText(),
 						isDefault: true,
 						action: async () => await _context.PushScope(element, element))
 					.ShowWhen(element.UxClass().Select(n => n.HasValue)
@@ -39,19 +39,19 @@ namespace Outracks.Fuse
 
 				// Edit base 
 				+ Menu.Item(
-					name: element.Base.UxClass().Select(n => "Edit " + n.Or("class")).AsText(), 
+					name: element.Base.UxClass().Select(n => "편집: " + n.Or("class")).AsText(), 
 					isEnabled: element.Base.IsReadOnly.IsFalse(), 
 					action: async () => await _context.PushScope(element.Base, element.Base))
 				
 				+ Menu.Item(
-					name: "Deselect",
+					name: "선택 해제",
 					hotkey: HotKey.Create(ModifierKeys.Meta, Key.D),
 					action: async () => await _context.Select(Element.Empty))
 
 				+ Menu.Separator
 
 				+ Menu.Item(
-					name:"Remove element", 
+					name:"요소 제거", 
 					command: Command.Create(
 						element.Parent
 								.IsEmpty

@@ -336,13 +336,13 @@ namespace Outracks.Fusion.Windows
 		public Task<Optional<AbsoluteDirectoryPath>> BrowseForDirectory(AbsoluteDirectoryPath directory)
 		{
 			var dialogs = new FileDialogs(_parent.OrDefault());
-			return dialogs.SelectDirectory(new DirectoryDialogOptions("Browse", directory));
+			return dialogs.SelectDirectory(new DirectoryDialogOptions("Å½»ö", directory));
 		}
 
 		public async Task<Optional<AbsoluteFilePath>> BrowseForFile(AbsoluteDirectoryPath directory, params FileFilter[] filters)
 		{
 			var dialogs = new FileDialogs(_parent.OrDefault());
-			return from dialogResult in await dialogs.OpenFile(new FileDialogOptions("Browse", directory, filters))
+			return from dialogResult in await dialogs.OpenFile(new FileDialogOptions("Å½»ö", directory, filters))
 				select dialogResult.Path;
 		}
 	}

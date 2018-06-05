@@ -86,15 +86,15 @@ namespace Outracks.Fuse.Stage
 
 		Menu CreateMenu(IObservable<Optional<IViewport>> viewport)
 		{
-			return Menu.Toggle("Selection", _selectionEnabled, HotKey.Create(ModifierKeys.Meta, Key.I))
+			return Menu.Toggle("선택 모드", _selectionEnabled, HotKey.Create(ModifierKeys.Meta, Key.I))
 				+ Menu.Separator
-				+ Menu.Item("New viewport", NewViewport, hotkey: HotKey.Create(ModifierKeys.Meta, Key.T))
-				+ Menu.Item("Close viewport", CloseFocusedViewport, hotkey: HotKey.Create(ModifierKeys.Meta, Key.W))
+				+ Menu.Item("새 뷰포트", NewViewport, hotkey: HotKey.Create(ModifierKeys.Meta, Key.T))
+				+ Menu.Item("뷰포트 닫기", CloseFocusedViewport, hotkey: HotKey.Create(ModifierKeys.Meta, Key.W))
 				+ Menu.Separator
-				+ Menu.Item("Restart", RestartViewport(viewport))
+				+ Menu.Item("재시작", RestartViewport(viewport))
 				+ Menu.Separator
 				+ DevicesMenu.Create(_latestDevice, _previewDevices)
-				+ Menu.Item("Go back", GoBack, hotkey: HotKey.Create(ModifierKeys.Meta, Key.B));
+				+ Menu.Item("뒤로 가기 (버튼)", GoBack, hotkey: HotKey.Create(ModifierKeys.Meta, Key.B));
 		}
 
 		Command RestartViewport(IObservable<Optional<IViewport>> viewport)

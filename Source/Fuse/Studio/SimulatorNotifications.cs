@@ -45,9 +45,9 @@ namespace Outracks.Fuse.Designer
 
 			return Observable
 				.Merge(
-					buildRequired.Select(_ => Fuse.Notification.Create("Rebuild is required for changes to take effect", Tuple.Create("Rebuild", rebuild))),
-					buildFailed.Select(_ => Fuse.Notification.Create("Build failed, see log for details", Tuple.Create("Rebuild", rebuild)).OnMouse(Command.Enabled(() => logViewIsExpanded.Write(true)))),
-					reifyFailed.Select(_ => Fuse.Notification.Create("Auto reload failed, see log for details").OnMouse(Command.Enabled(() => logViewIsExpanded.Write(true)))),
+					buildRequired.Select(_ => Fuse.Notification.Create("변경 사항을 적용하기 위해서는 재빌드를 필요로 합니다", Tuple.Create("Rebuild", rebuild))),
+					buildFailed.Select(_ => Fuse.Notification.Create("빌드 실패: 자세한 사항은 로그를 살펴봅니다", Tuple.Create("Rebuild", rebuild)).OnMouse(Command.Enabled(() => logViewIsExpanded.Write(true)))),
+					reifyFailed.Select(_ => Fuse.Notification.Create("자동 갱신 실패: 자세한 사항은 로그를 살펴봅니다").OnMouse(Command.Enabled(() => logViewIsExpanded.Write(true)))),
 					buildStarted.Select(_ => Control.Empty),
 					buildSucceeded.Select(_ => Control.Empty),
 					reifyStarted.Select(_ => Control.Empty),
@@ -63,7 +63,7 @@ namespace Outracks.Fuse.Designer
 			var buildIndicator = BuildIndicator(
 				fromSimulator: fromSimulator,
 				messageType: BuildProject.MessageType,
-				title: "Building...",
+				title: "빌드중...",
 				foreground: Theme.BuildBarForeground,
 				background: Theme.BuildBarBackground);
 

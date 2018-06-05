@@ -26,12 +26,12 @@ namespace Outracks.Fuse.Toolbox
 					.Left(Spacer.Medium)
 					.Left(Icons.ClassesSmall())
 					.Left(Spacer.Small)
-					.Left(Theme.Header("Your classes"))
+					.Left(Theme.Header("대상 클래스"))
 					.Fill()
 					.WithHeight(26))
 				.Top(ThemedTextBox
 					.Create(searchString)
-					.WithPlaceholderText(searchString.Select(str => str != ""), "Search your classes")
+					.WithPlaceholderText(searchString.Select(str => str != ""), "클래스 찾기")
 					.WithMediumPadding()
 					.ShowWhen(hasClasses))
 				.Top(	
@@ -39,7 +39,7 @@ namespace Outracks.Fuse.Toolbox
 						Icons.DragIconSmall(),
 						Spacer.Small,
 						Label.Create(
-							"Drag classes into the hierarchy \nto insert instances of them",
+							"클래스를 계층 구조에 드래그하여 안에\n인스턴스를 추가하십시오",
 							font: Theme.DefaultFont,
 							textAlignment: TextAlignment.Left,
 							color: Theme.DescriptorText),
@@ -51,7 +51,7 @@ namespace Outracks.Fuse.Toolbox
 							Icons.ExtractClass(hasClasses),
 							Spacer.Small,
 							Label.Create(
-								"Create a class from elements in the \nhierarchy and it will appear here",
+								"계층 구조 내 항목으로부터 클래스를 \n생성하면 여기에 나타날 것입니다",
 								font: Theme.DefaultFont,
 								textAlignment: TextAlignment.Left,
 								color: Theme.DescriptorText),

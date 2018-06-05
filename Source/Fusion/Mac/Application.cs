@@ -113,12 +113,12 @@ namespace Outracks.Fusion.OSX
 				  /*CreateFirstResponderMenuItem(name: "Undo", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.Z), selectorName: "undo:")
 				+ CreateFirstResponderMenuItem(name: "Redo", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta | Fusion.ModifierKeys.Shift, Key.Z), selectorName: "redo:")
 				+ MenuItem.CreateSeparator()
-				+ */CreateFirstResponderMenuItem(name: "Cut", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.X), selectorName: "cut:")
-				+ CreateFirstResponderMenuItem(name: "Copy", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.C), selectorName: "copy:")
-				+ CreateFirstResponderMenuItem(name: "Paste", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.V), selectorName: "paste:")
-				+ CreateFirstResponderMenuItem(name: "Paste and Match Style", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta | Fusion.ModifierKeys.Shift, Key.V), selectorName: "pasteAsPlainText:")
-				+ CreateFirstResponderMenuItem(name: "Delete", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.Backspace), selectorName: "delete:")
-				+ CreateFirstResponderMenuItem(name: "Select All", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.A), selectorName: "selectAll:");
+				+ */CreateFirstResponderMenuItem(name: "잘라내기", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.X), selectorName: "cut:")
+				+ CreateFirstResponderMenuItem(name: "복사하기", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.C), selectorName: "copy:")
+				+ CreateFirstResponderMenuItem(name: "붙여넣기", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.V), selectorName: "paste:")
+				+ CreateFirstResponderMenuItem(name: "붙여넣기 (스타일 적용)", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta | Fusion.ModifierKeys.Shift, Key.V), selectorName: "pasteAsPlainText:")
+				+ CreateFirstResponderMenuItem(name: "삭제하기", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.Backspace), selectorName: "delete:")
+				+ CreateFirstResponderMenuItem(name: "모두 선택", hotkey: HotKey.Create(Fusion.ModifierKeys.Meta, Key.A), selectorName: "selectAll:");
 		}
 
 		ISubject<NSResponder> _firstResponder = new BehaviorSubject<NSResponder>(null);
@@ -283,13 +283,13 @@ namespace Outracks.Fusion.OSX
 		public Task<Optional<AbsoluteDirectoryPath>> BrowseForDirectory(AbsoluteDirectoryPath directory)
 		{
 			var dialogs = new FileDialogs(_parent.OrDefault());
-			return dialogs.SelectDirectory(new DirectoryDialogOptions("Browse", directory));
+			return dialogs.SelectDirectory(new DirectoryDialogOptions("탐색", directory));
 		}
 
 		public async Task<Optional<AbsoluteFilePath>> BrowseForFile(AbsoluteDirectoryPath directory, params FileFilter[] filters)
 		{
 			var dialogs = new FileDialogs(_parent.OrDefault());
-			return from dialogResult in await dialogs.OpenFile(new FileDialogOptions("Browse", directory, filters))
+			return from dialogResult in await dialogs.OpenFile(new FileDialogOptions("탐색", directory, filters))
 				select dialogResult.Path;
 		}
 	}

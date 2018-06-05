@@ -44,12 +44,12 @@ namespace Outracks.Fuse
 									Icons.DevicesIcon(),
 									Control.Empty.WithWidth(4),
 									Label.Create(
-											text: "Devices",
+											text: "장치",
 											color: Theme.DefaultText,
 											font: Theme.DescriptorFont)
 										.CenterVertically(),
 									Control.Empty.WithWidth(4))
-								.SetToolTip("Connect this project to a device with the Fuse Preview App installed on it.")
+								.SetToolTip("이 프로젝트를 Fuse Preview App이 설치된 장치와 연결합니다.")
 								.WithBackground(
 									background: Observable.CombineLatest(
 											s.IsEnabled, s.IsHovered,
@@ -63,8 +63,8 @@ namespace Outracks.Fuse
 				{
 					return Layout.StackFromTop(
 						qrCode,
-						TextView("IP address:", endpoint.Select(e => e.ToString()).Or("Failed to find IP")),
-						TextView("Code:", code.ToString())
+						TextView("IP 주소:", endpoint.Select(e => e.ToString()).Or("IP를 찾지 못했습니다")),
+						TextView("코드:", code.ToString())
 					)
 					.WithWidth(200)
 					.CenterHorizontally()

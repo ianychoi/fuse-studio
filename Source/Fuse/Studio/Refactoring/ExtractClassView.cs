@@ -90,9 +90,9 @@ namespace Outracks.Fuse.Refactoring
 				Layout.StackFromTop(
 					ThemedButton.Create(
 							command: command,
-							label: "Make class from selection",
+							label: "선택 영역으로부터 클래스 만들기",
 							icon: Icons.ExtractClass(command.IsEnabled),
-							tooltip: "Make class from selection",
+							tooltip: "선택 영역으로부터 클래스 만들기",
 							hoverColor: hoverColor)
 						.WithHeight(45)
 						.OnMouse(

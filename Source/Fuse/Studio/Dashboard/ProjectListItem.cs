@@ -39,7 +39,7 @@ namespace Outracks.Fuse.Dashboard
 
 		public override string ToString()
 		{
-			return "{ Title: " + Title + ", Description: " + Description + " }";
+			return "{ 제목: " + Title + ", 설명: " + Description + " }";
 		}
 	}
 }

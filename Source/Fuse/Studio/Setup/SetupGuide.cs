@@ -25,7 +25,7 @@ namespace Outracks.Fuse.Setup
 				isVisible: showSetupGuide.CombineLatest(doneLoadingMainWindow, (s, _) => s),
 				window: dialog => new Window
 				{
-					Title = Observable.Return("Setup guide"),
+					Title = Observable.Return("셋업 가이드"),
 					Size = Optional.Some(Property.Constant(Optional.Some(new Size<Points>(500, 300)))),
 					Content = Control.Lazy(() => Create(softwares, report, dialog).ShowWhen(showSetupGuide))
 						.WithBackground(Theme.PanelBackground),
@@ -36,8 +36,8 @@ namespace Outracks.Fuse.Setup
 				});
 
 			Menu 
-				= Menu.Item("Install Android SDKs", () => fuse.RunFuse("install", new [] { "android" }, Observer.Create<string>(output.OnNext)))
-				+ Menu.Item("Setup guide", () => showSetupGuide.OnNext(true));
+				= Menu.Item("Android SDK 설치", () => fuse.RunFuse("install", new [] { "android" }, Observer.Create<string>(output.OnNext)))
+				+ Menu.Item("셋업 가이드", () => showSetupGuide.OnNext(true));
 		}
 
 		public IObservable<string> LogMessages { get; private set; } 

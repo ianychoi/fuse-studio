@@ -14,8 +14,8 @@ namespace Outracks.Fuse
 	{
 		public static Menu CommandItems(IObservable<Optional<AbsoluteFilePath>> project, IShell shell)
 		{
-			return Menu.Item("Open project folder", OpenFolder.CreateCommand(shell, project))
-				+ Menu.Item("Open in Terminal", OpenTerminal.CreateCommand(shell, project))
+			return Menu.Item("프로젝트 폴더 열기", OpenFolder.CreateCommand(shell, project))
+				+ Menu.Item("터미널 (명령 프롬프트)에서 열기", OpenTerminal.CreateCommand(shell, project))
 				+ OpenTextEditor.CreateMenu(project);
 		}
 

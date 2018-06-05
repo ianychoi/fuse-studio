@@ -7,7 +7,7 @@ namespace Outracks.Fuse.Inspector.Sections
 		public static IControl Create(IElement element, IEditorFactory editors)
 		{
 			return editors.ElementList(
-				"Rotation", element,
+				"회전", element,
 				SourceFragment.FromString("<Rotation/>"),
 				rotation => CreateRotationRow(rotation, editors)
 					.WithInspectorPadding());
@@ -24,7 +24,7 @@ namespace Outracks.Fuse.Inspector.Sections
 				Spacer.Medium,
 
 				Layout.Dock()
-					.Left(editors.Label("Degrees", degrees))
+					.Left(editors.Label("각도", degrees))
 					.Left(Spacer.Medium)
 					.Right(editors.Field(degrees).WithWidth(CellLayout.HalfCellWidth))
 					.Right(Spacer.Medium)

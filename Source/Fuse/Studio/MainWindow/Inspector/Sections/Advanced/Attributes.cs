@@ -24,7 +24,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						none: () => Layout.StackFromTop(
 							Spacer.Medim,
 							
-							Label.Create("Unknown element type", 
+							Label.Create("잘못된 항목 유형", 
 									font: Theme.DefaultFont, 
 									color: Theme.DisabledText, 
 									textAlignment: TextAlignment.Center)
@@ -50,7 +50,7 @@ namespace Outracks.Fuse.Inspector.Sections
 								.StackFromTop(separator: () => Spacer.Small)
 								.WithInspectorPadding(),
 
-							Label.Create("This class has no properties",
+							Label.Create("이 클래스는 (편집할) 다른 속성이 없습니다",
 									font: Theme.DefaultFont,
 									color: Theme.DisabledText,
 									textAlignment: TextAlignment.Center)

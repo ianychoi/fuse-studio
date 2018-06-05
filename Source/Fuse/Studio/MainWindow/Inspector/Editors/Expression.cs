@@ -38,19 +38,19 @@ namespace Outracks.Fuse.Inspector.Editors
 								Layout.Dock()
 									.Left(Icons.Confirm(Theme.Active).CenterVertically())
 									.Left(Spacer.Small)
-									.Fill(Theme.Header("Done"))
+									.Fill(Theme.Header("완료"))
 									.Center()
 									.WithHeight(30)))
 							.Bottom(Separator.Medium)
 							.Top(Spacer.Medium)
 							.Top(Label.Create(
-								text: "Expression Editor",
+								text: "표현식 편집기",
 								textAlignment: TextAlignment.Center,
 								font: Theme.DefaultFont,
 								color: Theme.DefaultText))
 							.Top(Spacer.Small)
 							.Top(Label.Create(
-								text: "You can write expressions here instead \n of using an explicit value",
+								text: "정확한 값 사용 대신 여기에 \n 표현식을 사용할 수 있습니다",
 								textAlignment: TextAlignment.Center,
 								font: Theme.DescriptorFont,
 								color: Theme.DescriptorText))

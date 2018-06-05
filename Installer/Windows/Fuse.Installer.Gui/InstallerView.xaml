@@ -19,7 +19,7 @@
     </Grid.RowDefinitions>
     <StackPanel>
         <Image RenderOptions.BitmapScalingMode="HighQuality" Source="fuse_logo_low.png" Width="150"></Image>
-        <TextBlock TextWrapping="WrapWithOverflow" Margin="0,40,0,0" Text="Fuse is a UX toolsuite for making native mobile apps for iOS and Android devices. This installation will take up roughly 300 MB of disk space.&#x0a;&#x0a;Note: iOS export requires a Mac running macOS and Xcode."></TextBlock>
+        <TextBlock TextWrapping="WrapWithOverflow" Margin="0,40,0,0" Text="Fuse는 iOS 및 Android 장치 모두에서 동작하는 네이티브 모바일 앱을 만드는 UX 툴셋입니다. 본 설치는 대략 300 MB 디스크 공간을 소모할 예정입니다.&#x0a;&#x0a;참고: iOS 내보내기는 macOS 및 Xcode가 실행 가능한 Mac을 필요로 합니다."></TextBlock>
     </StackPanel>
     <Grid Grid.Row="1">
         <Grid.ColumnDefinitions>
@@ -32,10 +32,10 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
             <CheckBox Click="LicenseAgreedCheck"  Foreground="{DynamicResource ForegroundColorBrush}">
-                <TextBlock FontWeight="SemiBold" Margin="0,0,0,0">I have read and agree with <Hyperlink Foreground="WhiteSmoke" Command="{Binding GotoLicensePageCommand}" >Fuse license agreement</Hyperlink></TextBlock>
+                <TextBlock FontWeight="SemiBold" Margin="0,0,0,0"><Hyperlink Foreground="WhiteSmoke" Command="{Binding GotoLicensePageCommand}" >Fuse 라이선스 약관 (영문)</Hyperlink>을 읽었으며 동의합니다</TextBlock>
             </CheckBox>
         </StackPanel>
-        <Button Grid.Row="1" VerticalAlignment="Bottom" Command="{Binding CancelCommand}" HorizontalAlignment="Left" Grid.Column="0">Cancel</Button>
-        <Button Grid.Row="1" VerticalAlignment="Bottom" Command="{Binding InstallCommand}" HorizontalAlignment="Right" Grid.Column="1">Install</Button>
+        <Button Grid.Row="1" VerticalAlignment="Bottom" Command="{Binding CancelCommand}" HorizontalAlignment="Left" Grid.Column="0">취소</Button>
+        <Button Grid.Row="1" VerticalAlignment="Bottom" Command="{Binding InstallCommand}" HorizontalAlignment="Right" Grid.Column="1">설치</Button>
     </Grid>
 </Grid>

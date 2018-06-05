@@ -34,7 +34,7 @@ namespace Outracks.Fuse.Inspector.Sections
 					CustomRadioButton.Create(
 						attribute,
 						Dock.Fill,
-						"Dock: Fill",
+						"Dock: Fill (채우기)",
 						(backgroundColor, color, stroke) => Layout.Layer(
 							CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 							Shapes.Rectangle(fill: color)
@@ -96,7 +96,7 @@ namespace Outracks.Fuse.Inspector.Sections
 					CustomRadioButton.Create(
 						attribute,
 						Dock.Left,
-						"Dock: Left",
+						"Dock: Left (좌)",
 						(backgroundColor, color, stroke) => Layout.Layer(
 							CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 							Shapes.Rectangle(fill: color)
@@ -118,7 +118,7 @@ namespace Outracks.Fuse.Inspector.Sections
 					CustomRadioButton.Create(
 						attribute,
 						Dock.Bottom,
-						"Dock: Bottom",
+						"Dock: Bottom (하)",
 						(backgroundColor, color, stroke) => Layout.Layer(
 							CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 							Shapes.Rectangle(fill: color)
@@ -140,7 +140,7 @@ namespace Outracks.Fuse.Inspector.Sections
 					CustomRadioButton.Create(
 						attribute,
 						Dock.Top,
-						"Dock: Top",
+						"Dock: Top (상)",
 						(backgroundColor, color, stroke) => Layout.Layer(
 							CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 							Shapes.Rectangle(fill: color)
@@ -162,7 +162,7 @@ namespace Outracks.Fuse.Inspector.Sections
 					CustomRadioButton.Create(
 						attribute,
 						Dock.Right,
-						"Dock: Right",
+						"Dock: Right (우)",
 						(backgroundColor, color, stroke) => Layout.Layer(
 							CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 							Shapes.Rectangle(fill: color)

@@ -13,12 +13,12 @@ namespace Outracks.Fuse.Inspector.Sections
 			return Layout.StackFromTop(
 				Separator.Shadow,
 				Separator.Weak,
-				Pane("Layout", editors, e => LayoutSection.Create(element, e)),
-				Pane("Size / Position", editors, e => SizePositionSection.Create(element, e)),
-				Pane("Style", editors, e => StyleSection.Create(element, e)),
-				Pane("Transform", editors, e => TransformSection.Create(element, e)),
-				Pane("Visibility", editors, e => VisibilitySection.Create(element, e)),
-				Pane("Attributes", editors, e => AttributesSection.Create(element, e), collapse: element.SimulatorId));
+				Pane("레이아웃", editors, e => LayoutSection.Create(element, e)),
+				Pane("크기 / 위치", editors, e => SizePositionSection.Create(element, e)),
+				Pane("스타일", editors, e => StyleSection.Create(element, e)),
+				Pane("Transform (변환)", editors, e => TransformSection.Create(element, e)),
+				Pane("Visibility (화면 표시)", editors, e => VisibilitySection.Create(element, e)),
+				Pane("속성", editors, e => AttributesSection.Create(element, e), collapse: element.SimulatorId));
 		}
 
 		static IControl Pane(string name, IEditorFactory editorFactory, Func<IEditorFactory, IControl> content, IObservable<object> collapse)
@@ -35,7 +35,7 @@ namespace Outracks.Fuse.Inspector.Sections
 			return Pane(name, editorFactory, content, lazy: false,
 				// Store expanded state as "Expand <name>" : "true", remove from settings when false
 				expanded: UserSettings
-					.Bool("Expand " + name)
+					.Bool("확장하기: " + name)
 					.OrFalse());
 		}
 

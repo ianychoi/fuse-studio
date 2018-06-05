@@ -10,7 +10,7 @@ namespace Outracks.Fuse
 			writer.WriteLine(e.StackTrace);
 			while ((e = e.InnerException) != null)
 			{
-				writer.WriteLine("Inner exception: " + e.Message);
+				writer.WriteLine("내부 예외: " + e.Message);
 				writer.WriteLine(e.StackTrace);
 			}
 		}

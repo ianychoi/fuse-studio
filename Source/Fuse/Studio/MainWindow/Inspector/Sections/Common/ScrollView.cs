@@ -12,7 +12,7 @@
 					Spacer.Medium,
 
 					editors.Dropdown(scrollDirection)
-						.WithLabel("Scroll Direction")
+						.WithLabel("스크롤 방향")
 						.WithInspectorPadding(),
 					
 					Spacer.Medium)

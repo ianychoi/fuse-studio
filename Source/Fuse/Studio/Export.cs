@@ -36,8 +36,8 @@ namespace Outracks.Fuse.Designer
 						Observer.Create<string>(output.OnNext))))
 				.Switch();
 
-			Menu = Menu.Item("Export for Android", ExportForAndroid)
-				+ Menu.Item("Export for iOS" + (!isMac ? " (Mac only)" : ""), ExportForIos);
+			Menu = Menu.Item("Android용 내보내기", ExportForAndroid)
+				+ Menu.Item("iOS용 내보내기" + (!isMac ? " (Mac 전용)" : ""), ExportForIos);
 		}
 
 		public Menu Menu { get; private set; }

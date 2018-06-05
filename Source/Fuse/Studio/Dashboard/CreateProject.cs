@@ -94,17 +94,17 @@ namespace Outracks.Fuse.Dashboard
 
 					.Fill(
 						Layout.StackFromTop(
-							Label.Create("Name:", color: Theme.DefaultText)
+							Label.Create("이름:", color: Theme.DefaultText)
 								.WithPadding(LabelThickness),
 							ValidatedTextBox.Create(validatedName)
 								.WithPadding(ControlPadding),
 							Control.Empty
 								.WithHeight(8),
-							Label.Create("Location:", color: Theme.DefaultText)
+							Label.Create("경로:", color: Theme.DefaultText)
 								.WithPadding(LabelThickness),
 							Layout.Dock()
 								.Right(
-									Buttons.DefaultButton(text: "Browse", cmd: Command.Enabled(async () =>
+									Buttons.DefaultButton(text: "탐색", cmd: Command.Enabled(async () =>
 										{
 											var directory = await dialog.BrowseForDirectory(await projectLocation.FirstAsync().Or(DirectoryPath.GetCurrentDirectory()));
 											if (directory.HasValue)

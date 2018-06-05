@@ -24,7 +24,7 @@ namespace Outracks.Fuse.Designer
 				window: dialog =>
 					new Window
 					{
-						Title = Observable.Return("About Fuse"),
+						Title = Observable.Return("Fuse 정보"),
 						Content = Control.Lazy(() =>
 							Layout.Dock()
 								.Top(LogoAndVersion.Create(version).WithMacWindowStyleCompensation())
@@ -43,7 +43,7 @@ namespace Outracks.Fuse.Designer
 					}
 			);
 
-			Menu = Menu.Item("About Fuse", () => showAboutDialog.OnNext(true));
+			Menu = Menu.Item("Fuse 정보", () => showAboutDialog.OnNext(true));
 		}
 
 		static IControl CreateOkButton(Command clicked)
@@ -54,7 +54,7 @@ namespace Outracks.Fuse.Designer
 					.Left(Fuse.Icons.Confirm(Theme.Active).CenterVertically())
 					.Left(Spacer.Small)
 					.Fill(Label.Create(
-						text: "Ok",
+						text: "확인",
 						color: Theme.DefaultText))
 					.Center())
 				.WithHeight(45);

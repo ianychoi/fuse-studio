@@ -63,8 +63,8 @@ namespace Outracks.Fusion.Windows
 						
 					return textBox;
 				}).SetContextMenu(
-					Menu.Item(name: "Copy", command: Command.Enabled(() => textBox.Copy()))
-					+ Menu.Item(name: "Select All", command: Command.Enabled(() => textBox.SelectAll()))
+					Menu.Item(name: "복사하기", command: Command.Enabled(() => textBox.Copy()))
+					+ Menu.Item(name: "모두 선택", command: Command.Enabled(() => textBox.SelectAll()))
 				);
 			};
 		}

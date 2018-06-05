@@ -16,7 +16,7 @@ namespace Outracks.Fuse.Designer
 
 		public static IEnumerable<string> GetLogMessages(OpenGlVersion glVersion, IReport report)
 		{
-			yield return "OpenGL Version: " + glVersion.GlVersion + "\n";
+			yield return "OpenGL 버전: " + glVersion.GlVersion + "\n";
 			yield return "OpenGL Vendor: " + glVersion.GlVendor + "\n";
 			yield return "OpenGL Renderer: " + glVersion.GlRenderer + "\n";
 			var version = glVersion.ToVersion();

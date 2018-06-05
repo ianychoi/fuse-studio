@@ -13,7 +13,7 @@ namespace Outracks.Fuse
 		{
 			return new Window
 			{
-				Title = Observable.Return("Add build flags"),
+				Title = Observable.Return("빌드 플래그 추가"),
 				Size = Optional.Some(Property.Constant(Optional.Some(new Size<Points>(600, 280)))),
 				Content = Control.Lazy(() => CreateContent(showWindow, args)),
 				Background = Theme.PanelBackground,
@@ -38,7 +38,7 @@ namespace Outracks.Fuse
 					Layout.StackFromTop(
 							Spacer.Medium,
 							Label.Create(
-									text: "Separate flags with a space. Flags apply to all targets.",
+									text: "여러 플래그를 스페이스바로 구분합니다. 플래그는 모든 대상에 적용됩니다.",
 									color: Theme.DefaultText)
 								.CenterHorizontally(),
 							Spacer.Medim,

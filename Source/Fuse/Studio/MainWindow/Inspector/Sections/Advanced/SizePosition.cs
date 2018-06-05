@@ -27,32 +27,32 @@
 					.Left(Layout.StackFromTop(
 							editors.Label(" ", width, height),
 							Spacer.Smaller,
-							editors.Label("Width", width),
+							editors.Label("너비", width),
 							Spacer.Small,
-							editors.Label("Height", height))
+							editors.Label("높이", height))
 						.WithWidth(CellLayout.HalfCellWidth))
 					.Left(Spacer.Small)
 					.Left(Layout.StackFromTop(
 							editors.Label(" ", width, height),
 							Spacer.Smaller,
-							editors.Field(width, toolTip: "Width"),
+							editors.Field(width, toolTip: "Width (너비)"),
 							Spacer.Small,
-							editors.Field(height, toolTip: "Height"))
+							editors.Field(height, toolTip: "Height (높이)"))
 						.WithWidth(CellLayout.HalfCellWidth))
 					.Right(Layout.StackFromTop(
-							editors.Label("Max", maxWidth, maxHeight),
+							editors.Label("최대값", maxWidth, maxHeight),
 							Spacer.Smaller,
-							editors.Field(maxWidth, toolTip: "Maximum width"),
+							editors.Field(maxWidth, toolTip: "최대 너비값"),
 							Spacer.Small,
-							editors.Field(maxHeight, toolTip: "Maximum height"))
+							editors.Field(maxHeight, toolTip: "최대 높이값"))
 						.WithWidth(CellLayout.HalfCellWidth))
 					.Right(Spacer.Small)
 					.Right(Layout.StackFromTop(
-							editors.Label("Min", minWidth, minHeight),
+							editors.Label("최소값", minWidth, minHeight),
 							Spacer.Smaller,
-							editors.Field(minWidth, toolTip: "Minimum width"),
+							editors.Field(minWidth, toolTip: "최소 너비값"),
 							Spacer.Small,
-							editors.Field(minHeight, toolTip: "Minimum height"))
+							editors.Field(minHeight, toolTip: "최소 높이값"))
 						.WithWidth(CellLayout.HalfCellWidth))
 					.Fill(Spacer.Small)
 					.WithInspectorPadding(),

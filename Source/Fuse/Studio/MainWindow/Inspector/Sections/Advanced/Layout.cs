@@ -34,8 +34,8 @@
 				Spacer.Medium, Separator.Weak, Spacer.Medium,
 				
 				Layout.Dock()
-					.Left(editors.Dropdown(layoutRole).WithLabelAbove("Layout Role"))
-					.Right(editors.Dropdown(layer).WithLabelAbove("Layer"))
+					.Left(editors.Dropdown(layoutRole).WithLabelAbove("레이아웃 역할"))
+					.Right(editors.Dropdown(layer).WithLabelAbove("Layer (계층)"))
 					.Fill()
 					.WithInspectorPadding(),
 

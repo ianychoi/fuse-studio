@@ -25,11 +25,11 @@ namespace Outracks.Fuse.Dashboard
 			var recentProjectItems = RecentProjects.All
 				.SelectPerElement(project =>
 					new ProjectListItem(
-						menuItemName: "Open",
+						menuItemName: "열기",
 						title: project.Name,
-						descriptionTitle: "Last opened:",
+						descriptionTitle: "마지막 확인 일자:",
 						description: ProjectLastOpenedString(project),
-						locationTitle: "Location:",
+						locationTitle: "경로:",
 						location: project.ProjectPath.NativePath,
 						command: Command.Enabled(async () =>
 						{
@@ -50,9 +50,9 @@ namespace Outracks.Fuse.Dashboard
 				.LoadTemplatesFrom(UnoConfig.Current.GetTemplatesDir() / "Projects", _shell)
 				.Select(template =>
 					new ProjectListItem(
-						menuItemName: "Create",
-						title: "New " + template.Name,
-						descriptionTitle: "Description:",
+						menuItemName: "생성",
+						title: "새 " + template.Name,
+						descriptionTitle: "설명:",
 						description: template.Description,
 						locationTitle: String.Empty,
 						location: String.Empty,
@@ -111,7 +111,7 @@ namespace Outracks.Fuse.Dashboard
 							data: item,
 							defaultCommand: item.Switch(i => i.Command),
 							control: state => ProjectListItemControl.Create(item, state),
-							toolTip: item.Select(i => "Open " + i.Title).AsText()))
+							toolTip: item.Select(i => "열기: " + i.Title).AsText()))
 					.SelectPerElement(elm => elm.WithPadding(new Thickness<Points>(0, 0, 32, 0)))
 					.DirectionalGrid(Axis2D.Horizontal, 2)
 					.WithPadding(left: new Points(40), right: new Points(20))
@@ -132,7 +132,7 @@ namespace Outracks.Fuse.Dashboard
 				+ Menu.Separator
 				+ ProjectMenu.CommandItems(project, _shell)
 				+ Menu.Separator
-				+ Menu.Item("Remove from list", RemoveRecentProject(project));
+				+ Menu.Item("목록에서 제거", RemoveRecentProject(project));
 		}
 
 		static Command RemoveRecentProject(IObservable<Optional<AbsoluteFilePath>> path)

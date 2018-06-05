@@ -25,9 +25,9 @@ namespace Outracks.Fuse.Designer
 			get
 			{
 #if DEBUG
-				return Menu.Submenu("Debug", Create());
+				return Menu.Submenu("디버그", Create());
 #else
-				return Menu.Submenu("Debug", Create()).ShowWhen(_alwaysShowDebugMenuSetting.Select(x => x.Or(false)));
+				return Menu.Submenu("디버그", Create()).ShowWhen(_alwaysShowDebugMenuSetting.Select(x => x.Or(false)));
 #endif
 			}
 		}
@@ -68,14 +68,14 @@ namespace Outracks.Fuse.Designer
 					dialog =>
 						new Window()
 						{
-							Title = Observable.Return("Debug"),
+							Title = Observable.Return("디버그"),
 							Size = Property.Create<Optional<Size<Points>>>(new Size<Points>(600, 500)).ToOptional(),
 							Content = Control.Lazy(Debugging.CreateDebugControl),
 						}
 				));
 
 			return
-				  Menu.Item("Open Debug Window", action: createDebugWindow)
+				  Menu.Item("디버그 창 열기", action: createDebugWindow)
 				+ Menu.Item("Random ux mutator", action: () => RandomMutatorWindow.Create(_project))
 				+ Menu.Item("Console output", action: ConsoleOutputWindow.Create)
 				+ Menu.Item("Icon viewer", action: IconPreviewWindow.Create);

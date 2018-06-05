@@ -43,8 +43,8 @@ namespace Outracks.Fuse.Designer
 						Observer.Create<string>(output.OnNext))))
 				.Switch();
 
-				Menu = Menu.Item("Preview on Android", PreviewAndroidApp)
-					+ Menu.Item("Preview on iOS" + (!isMac ? " (Mac only)" : ""), PreviewIosApp);
+				Menu = Menu.Item("Android에서 미리보기", PreviewAndroidApp)
+					+ Menu.Item("iOS에서 미리보기" + (!isMac ? " (Mac 전용)" : ""), PreviewIosApp);
 
 		}
 

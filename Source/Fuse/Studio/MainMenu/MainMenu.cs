@@ -30,16 +30,16 @@ namespace Outracks.Fuse.Designer
 				+ Menu.Separator;
 
 			var menus 
-				= Menu.Submenu("File", CreateFileMenu(fuse))
-				+ Menu.Submenu("Edit", Application.EditMenu)
-				+ Menu.Submenu("Element", elementMenu)
-				+ Menu.Submenu("Project", projectMenu)
-				+ Menu.Submenu("Viewport", stage.Menu)
-				+ Menu.Submenu("Preview", preview.Menu)
-				+ Menu.Submenu("Export", export.Menu)
-				+ Menu.Submenu("Tools", toolsMenu)
-				+ Menu.Submenu("Window", windowMenu)
-				+ Menu.Submenu("Help", CreateHelpMenu(fuse, help, about.Menu))
+				= Menu.Submenu("파일", CreateFileMenu(fuse))
+				+ Menu.Submenu("편집", Application.EditMenu)
+				+ Menu.Submenu("항목", elementMenu)
+				+ Menu.Submenu("프로젝트", projectMenu)
+				+ Menu.Submenu("뷰포트", stage.Menu)
+				+ Menu.Submenu("미리보기", preview.Menu)
+				+ Menu.Submenu("내보내기", export.Menu)
+				+ Menu.Submenu("도구", toolsMenu)
+				+ Menu.Submenu("창", windowMenu)
+				+ Menu.Submenu("도움말", CreateHelpMenu(fuse, help, about.Menu))
 				+ debug.Menu;
 
 			var fuseMenu = Menu.Submenu("Fuse", CreateFuseMenu(fuse, about.Menu));
@@ -75,7 +75,7 @@ namespace Outracks.Fuse.Designer
 		static Menu CreateSplashScreenItem()
 		{
 			return Menu.Item(
-				"New...",
+				"새 프로젝트...",
 				hotkey: HotKey.Create(ModifierKeys.Meta, Key.N),
 				action: () => Application.LaunchedWithoutDocuments());
 		}
@@ -83,7 +83,7 @@ namespace Outracks.Fuse.Designer
 		static Menu CreateOpenItem()
 		{
 			return Menu.Item(
-				"Open...",
+				"열기...",
 				hotkey: HotKey.Create(ModifierKeys.Meta, Key.O),
 				action: () => Application.ShowOpenDocumentDialog(new FileFilter("Fuse Project", "unoproj")));
 		}

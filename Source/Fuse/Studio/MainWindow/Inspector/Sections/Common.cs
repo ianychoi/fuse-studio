@@ -36,14 +36,14 @@ namespace Outracks.Fuse.Inspector.Sections
 								Layout.Dock()
 									.Left(Icons.Confirm(Theme.Active).CenterVertically())
 									.Left(Spacer.Small)
-									.Fill(Theme.Header("Done"))
+									.Fill(Theme.Header("완료"))
 									.Center()
 									.WithHeight(30)))
 							.Bottom(Separator.Medium)
 							.Top(Spacer.Medium)
-							.Top(Label.Create(text: "Replace element", textAlignment: TextAlignment.Center, font: Theme.DefaultFont, color: Theme.DefaultText))
+							.Top(Label.Create(text: "항목 변경", textAlignment: TextAlignment.Center, font: Theme.DefaultFont, color: Theme.DefaultText))
 							.Top(Spacer.Small)
-							.Top(Label.Create(text: "Enter a new element type to replace \n the current element type", textAlignment: TextAlignment.Center, font: Theme.DescriptorFont, color: Theme.DescriptorText))
+							.Top(Label.Create(text: "현재 항목 유형에 대해 변경하고자 하는 \n 항목 유형을 입력합니다.", textAlignment: TextAlignment.Center, font: Theme.DescriptorFont, color: Theme.DescriptorText))
 							.Top(Spacer.Medium)
 							.Left(Spacer.Medium)
 							.Right(Spacer.Medium)
@@ -65,7 +65,7 @@ namespace Outracks.Fuse.Inspector.Sections
 				
 				Separator.Weak, Spacer.Medium,
 
-				editors.NameRow("Instance Name", element.UxName(), deferEdit: true)
+				editors.NameRow("인스턴스 이름", element.UxName(), deferEdit: true)
 					.WithInspectorPadding(),
 					
 				Spacer.Medium, Separator.Weak,

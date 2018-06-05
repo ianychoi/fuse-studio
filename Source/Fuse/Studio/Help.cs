@@ -8,9 +8,9 @@ namespace Outracks.Fuse.Designer
 		public Help()
 		{
 			Menu =
-				  Menu.Item("Documentation", CreateUrlAction(DocsUrl))
-				+ Menu.Item("Examples", CreateUrlAction(ExamplesUrl))
-				+ Menu.Item("Community", CreateUrlAction(CommunityUrl));
+				  Menu.Item("문서", CreateUrlAction(DocsUrl))
+				+ Menu.Item("예제", CreateUrlAction(ExamplesUrl))
+				+ Menu.Item("커뮤니티", CreateUrlAction(CommunityUrl));
 		}
 
 		static Command CreateUrlAction(string url)

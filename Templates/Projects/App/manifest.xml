@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TemplateManifest Name="Fuse project">
-	<Description>Create a project with a single empty view</Description>
+	<Description>단일 뷰를 가지는 빈 프로젝트 생성</Description>
 	<Alias>app</Alias>
 </TemplateManifest>

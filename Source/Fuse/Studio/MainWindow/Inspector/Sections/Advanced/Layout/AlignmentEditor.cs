@@ -39,7 +39,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.Default,
-							"Alignment: Default",
+							"정렬: Default",
 							(backgroundColor, color, stroke) =>
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color))
 						.WithPadding(right: smallPadding),
@@ -47,7 +47,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.Center,
-							"Alignment: Center",
+							"정렬: Center",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).Center()))
@@ -56,7 +56,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.Bottom,
-							"Alignment: Bottom",
+							"정렬: Bottom",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								Shapes.Rectangle(fill: color)
@@ -66,7 +66,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.Top,
-							"Alignment: Top",
+							"정렬: Top",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								Shapes.Rectangle(fill: color)
@@ -76,7 +76,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.Left,
-							"Alignment: Left",
+							"정렬: Left",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								Shapes.Rectangle(fill: color)
@@ -86,7 +86,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.Right,
-							"Alignment: Right",
+							"정렬: Right",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								Shapes.Rectangle(fill: color)
@@ -96,7 +96,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.HorizontalCenter,
-							"Alignment: Horizontal center",
+							"정렬: Horizontal center",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								Shapes.Line(
@@ -110,7 +110,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.VerticalCenter,
-							"Alignment: Vertical center",
+							"정렬: Vertical center",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								Shapes.Line(
@@ -125,7 +125,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.BottomCenter,
-							"Alignment: Bottom center",
+							"정렬: Bottom center",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockBottom().CenterHorizontally()))
@@ -134,7 +134,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.TopCenter,
-							"Alignment: Top center",
+							"정렬: Top center",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockTop().CenterHorizontally()))
@@ -143,7 +143,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.CenterLeft,
-							"Alignment: Center left",
+							"정렬: Center left",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockLeft().CenterVertically()))
@@ -152,7 +152,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.CenterRight,
-							"Alignment: Center right",
+							"정렬: Center right",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockRight().CenterVertically()))
@@ -161,7 +161,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.BottomLeft,
-							"Alignment: Bottom left",
+							"정렬: Bottom left",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockBottomLeft()))
@@ -170,7 +170,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.BottomRight,
-							"Alignment: Bottom right",
+							"정렬: Bottom right",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockBottomRight()))
@@ -179,7 +179,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.TopLeft,
-							"Alignment: Top left",
+							"정렬: Top left",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockTopLeft()))
@@ -188,7 +188,7 @@ namespace Outracks.Fuse.Inspector.Sections
 						CustomRadioButton.Create(
 							attribute,
 							Alignment.TopRight,
-							"Alignment: Top right",
+							"정렬: Top right",
 							(backgroundColor, color, stroke) => Layout.Layer(
 								CustomRadioButton.CreateBackgroundRect(backgroundColor, color),
 								CustomRadioButton.CreateSmallRect(color).DockTopRight()))))

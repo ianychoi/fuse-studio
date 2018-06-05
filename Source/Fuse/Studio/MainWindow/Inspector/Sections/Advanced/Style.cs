@@ -17,15 +17,15 @@
 				Spacer.Medium,
 
 				Layout.Dock()
-					.Left(editors.Color(color).WithLabelAbove("Color"))
-					.Right(editors.Color(background).WithLabelAbove("Background"))
+					.Left(editors.Color(color).WithLabelAbove("Color (색상)"))
+					.Right(editors.Color(background).WithLabelAbove("Background (배경색)"))
 					.Fill()
 					.WithInspectorPadding(),
 
 				Spacer.Medium, Separator.Weak, Spacer.Medium,
 
 				Layout.Dock()
-					.Left(editors.Label("Opacity", opacity))
+					.Left(editors.Label("Opacity (투명도)", opacity))
 					.Left(Spacer.Medium)
 					.Right(editors.Field(opacity).WithWidth(CellLayout.HalfCellWidth))
 					.Right(Spacer.Small)
@@ -36,8 +36,8 @@
 				Separator.Weak,
 				Spacer.Medium,
 				Label.Create(
-					"Effects are added as \n" +
-					"children of the current element",
+					"효과는 현재 항목에서\n" +
+					"자식 요소에 추가됩니다",
 					font: Theme.DefaultFont,
 					color: Theme.DescriptorText,
 					textAlignment: TextAlignment.Center),

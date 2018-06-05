@@ -83,7 +83,7 @@ namespace Outracks.Fuse.Inspector.Editors
 					.SetCursor(isDisabled.Select(d => d ? Cursor.Normal : Cursor.ResizeHorizontally));
 
 			return label
-				.SetContextMenu(Menu.Item("Clear", clear));
+				.SetContextMenu(Menu.Item("ªË¡¶", clear));
 		}
 	}
 }

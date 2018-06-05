@@ -125,8 +125,8 @@ namespace Outracks.Fuse.Stage
 				.PoolPerElement(oo =>
 					BoxFactory.CreateSpacingBox(
 						context.GetBounds(oo),
-						context.GetThickness(oo, "Margin"),
-						context.GetThickness(oo, "Padding")))
+						context.GetThickness(oo, "Margin (여백)"),
+						context.GetThickness(oo, "Padding (패딩)")))
 				.Layer();
 		}
 

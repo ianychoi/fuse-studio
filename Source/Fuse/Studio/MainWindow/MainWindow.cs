@@ -243,8 +243,8 @@ namespace Outracks.Fuse.Designer
 						.Fill(
 							CreateHeaderControl(
 								icon: SelectionIcon.Create(selectionEnabled, true),
-								tooltipText: "Enable to select elements in the app.",
-								buttonText : "Selection",
+								tooltipText: "앱에서 항목 선택을 활성화합니다.",
+								buttonText : "선택",
 								labelColor: selectionEnabled.IsFalse()
 									.Select(e => e ? Theme.DefaultText : Theme.ActiveHover)
 									.Switch(),
@@ -260,8 +260,8 @@ namespace Outracks.Fuse.Designer
 						.Fill(
 							CreateHeaderControl(
 								icon: TouchIcon.Create(selectionEnabled, true),
-								tooltipText: "Enable to intract with the app.",
-								buttonText : "Touch",
+								tooltipText: "앱에서 인터렉션을 활성화합니다.",
+								buttonText : "터치",
 								labelColor: selectionEnabled
 									.Select(e => e ? Theme.DefaultText : Theme.ActiveHover)
 									.Switch(),
@@ -300,7 +300,7 @@ namespace Outracks.Fuse.Designer
 												? Theme.FaintBackground
 												: Color.Transparent)
 									.Switch())
-							.SetToolTip("Enable to select elements in the app. Disable to interact with the app.")),
+							.SetToolTip("앱에서 항목을 선택하여 활성화합니다. 비활성화하면 앱에서 인터렉션을 허용합니다.")),
 					Control.Empty.WithWidth(8),
 					Button.Create(toggleMode, state =>
 							MinimizeAndMaximizeIcon.Create(mode)
@@ -313,7 +313,7 @@ namespace Outracks.Fuse.Designer
 												? Theme.FaintBackground
 												: Color.Transparent)
 									.Switch()))
-							.SetToolTip("Switch between normal and compact mode. Click to switch mode."));
+							.SetToolTip("일반 모드 및 컴팩트 모드를 전환합니다. 클릭하여 전환하세요."));
 		}
 
 		static IControl CreateTopBar(
@@ -338,8 +338,8 @@ namespace Outracks.Fuse.Designer
 							Layout
 								.StackFromLeft(CreateHeaderControl(
 									icon: Fuse.Icons.AddViewport(),
-									tooltipText: "Click to add a new Viewport",
-									buttonText : "Add Viewport",
+									tooltipText: "클릭하여 새로운 뷰포트를 추가합니다",
+									buttonText : "뷰포트 추가",
 									command: addViewport,
 									labelColor: Theme.DefaultText),
 									Control.Empty.WithWidth(16)
@@ -348,8 +348,8 @@ namespace Outracks.Fuse.Designer
 								
 							CreateHeaderControl(
 									icon: MinimizeAndMaximizeIcon.Create(mode),
-									tooltipText: "Switch between normal and compact mode. Click to switch mode.",
-									buttonText : "Compact",
+									tooltipText: "일반 모드 및 컴팩트 모드를 전환합니다. 클릭하여 전환하세요.",
+									buttonText : "컴팩트",
 									labelColor: Theme.DefaultText,
 									command: toggleMode)
 								.HideWhen(isCompact),

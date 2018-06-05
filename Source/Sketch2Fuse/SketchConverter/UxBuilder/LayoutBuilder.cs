@@ -51,9 +51,9 @@ namespace SketchConverter.UxBuilder
 		{
 			switch (aa)
 			{
-				case UxAxisAlignment.Start: return "Left";
-				case UxAxisAlignment.End: return "Right";
-				case UxAxisAlignment.Center: return "Center";
+				case UxAxisAlignment.Start: return "Left (좌)";
+				case UxAxisAlignment.End: return "Right (우)";
+				case UxAxisAlignment.Center: return "Center (중앙)";
 				default: return "";
 			}
 		}
@@ -62,9 +62,9 @@ namespace SketchConverter.UxBuilder
 		{
 			switch (aa)
 			{
-				case UxAxisAlignment.Start: return "Top";
-				case UxAxisAlignment.End: return "Bottom";
-				case UxAxisAlignment.Center: return "Center";
+				case UxAxisAlignment.Start: return "Top (위)";
+				case UxAxisAlignment.End: return "Bottom (아래)";
+				case UxAxisAlignment.Center: return "Center (중앙)";
 				default: return "";
 			}
 		}
@@ -74,25 +74,25 @@ namespace SketchConverter.UxBuilder
 			if (horizontal == UxAxisAlignment.Default
 				&& vertical == UxAxisAlignment.Default)
 			{
-				return "Default";
+				return "Default (디폴트)";
 			}
 
 			if (horizontal == UxAxisAlignment.Center
 				&& vertical == UxAxisAlignment.Center)
 			{
-				return "Center";
+				return "Center (중앙)";
 			}
 
 			if (horizontal == UxAxisAlignment.Center
 				&& vertical == UxAxisAlignment.Default)
 			{
-				return "HorizontalCenter";
+				return "HorizontalCenter (수평 중앙)";
 			}
 
 			if (horizontal == UxAxisAlignment.Default
 				&& vertical == UxAxisAlignment.Center)
 			{
-				return "VerticalCenter";
+				return "VerticalCenter (수직 중앙)";
 			}
 
 			return BuildVerticalAlignmentString(vertical) + BuildHorizontalAlignmentString(horizontal);

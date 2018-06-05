@@ -14,9 +14,9 @@ namespace Outracks.Fuse.Inspector.Sections
 			var padding = element.GetThickness("Padding", new Thickness<Points>(0, 0, 0, 0));
 
 			return Layout.StackFromTop(
-					ThicknessEditor(margin, editors).WithLabel("Margin"),
+					ThicknessEditor(margin, editors).WithLabel("Margin (여백)"),
 					Spacer.Small,
-					ThicknessEditor(padding, editors).WithLabel("Padding"))
+					ThicknessEditor(padding, editors).WithLabel("Padding (패딩)"))
 				.WithInspectorPadding();
 		}
 

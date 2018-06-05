@@ -40,14 +40,14 @@ namespace Outracks.Fuse.Designer
 				(d, bl, vb, pp) => new BuildProject(pp.NativePath, List.Create(d.ToArray()), bl, vb));
 
 			Menu =
-				  Menu.Item("Refresh", Refresh, hotkey: HotKey.Create(ModifierKeys.Meta, Key.R))
-				+ Menu.Item("Rebuild", Rebuild, hotkey: HotKey.Create(ModifierKeys.Meta | ModifierKeys.Shift, Key.R))
+				  Menu.Item("새로 고침", Refresh, hotkey: HotKey.Create(ModifierKeys.Meta, Key.R))
+				+ Menu.Item("다시 빌드", Rebuild, hotkey: HotKey.Create(ModifierKeys.Meta | ModifierKeys.Shift, Key.R))
 				+ Menu.Separator
-				+ Menu.Item("Reconnect USB (Android)", enableUsbMode)
+				+ Menu.Item("USB 재연결 (Android)", enableUsbMode)
 				+ Menu.Separator
 				+ previewOnDevice.Menu
 				+ Menu.Separator
-				+ Menu.Item("Build flags", BuildFlags);
+				+ Menu.Item("빌드 플래그", BuildFlags);
 		}
 
 		public Menu Menu { get; private set; }

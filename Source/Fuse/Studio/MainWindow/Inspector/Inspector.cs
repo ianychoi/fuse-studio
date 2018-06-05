@@ -69,7 +69,7 @@ namespace Outracks.Fuse.Inspector
 						.WithOverlay(Arrow().WithPadding(new Thickness<Points>(rectangleWidth * 0.99, rectangleHeight * 1.3, 0, 0)).Center()),
 					Spacer.Medium,
 					Label.Create(
-						"Select something to get started",
+						"시작하려면 무언가를 선택해보세요",
 						color: Theme.DefaultText,
 						font: Theme.DefaultFont))
 				.Center()
@@ -85,7 +85,7 @@ namespace Outracks.Fuse.Inspector
 					(isTrigger, isAnimator) =>
 					{
 						if (isTrigger || isAnimator)
-							return Optional.Some(string.Format("Currently you can't edit {0}.\r\nYou'll have to do it manually.", isTrigger ? "Triggers" : "Animators"));
+							return Optional.Some(string.Format("현재는 {0} 편집을 지원하지 않습니다.\r\n수동으로 작업해야 합니다.", isTrigger ? "Triggers" : "Animators"));
 						return Optional.None();
 					})
 				.DistinctUntilChanged()
@@ -121,7 +121,7 @@ namespace Outracks.Fuse.Inspector
 			return Layout.Dock()
 				.Left(editors.Label(name, property).WithWidth(CellLayout.FullCellWidth))
 				.Left(Spacer.Small)
-				.Fill(editors.Field(property, placeholderText: "Add name here", deferEdit: deferEdit));
+				.Fill(editors.Field(property, placeholderText: "여기에 이름을 입력", deferEdit: deferEdit));
 		}
 	}
 }
